@@ -21,6 +21,8 @@
     "ffmpeg-static": "^5.1.0",
     "google-images": "^2.1.0",
     "node-fetch": "^2.6.7",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "youtube-sr": "^4.3.4",
+    "ytdl-core": "^4.11.5"
   }
 }
