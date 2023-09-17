@@ -10,6 +10,13 @@ function getQuote() {
 		});
 }
 
+function getMeme() {
+	return fetch('https://meme-api.com/gimme')
+		.then((res) => res.json())
+		.then((data) => data.url || 'Try later my man!');
+}
+
 module.exports = {
 	getQuote,
+	getMeme,
 };

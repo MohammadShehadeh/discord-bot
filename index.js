@@ -1,6 +1,5 @@
 require('dotenv').config();
 
-const http = require('http');
 const express = require('express');
 const path = require('path');
 const { Client, Events } = require('discord.js');
@@ -28,9 +27,7 @@ client.on(Events.MessageCreate, async (message) => {
 	if (message.author.bot) return '';
 
 	if (message.content.startsWith(COMMANDS.PREFIX)) {
-		const CMD_NAME = message.content
-			.trim()
-			.substring(COMMANDS.PREFIX.length);
+		const CMD_NAME = message.content.trim().substring(COMMANDS.PREFIX.length);
 
 		if (CMD_NAME === COMMANDS.INSPIRE) {
 			return message.channel.send('quote');
@@ -43,9 +40,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
 	const command = interaction.client.commands.get(interaction.commandName);
 	if (!command) {
-		console.error(
-			`No command matching ${interaction.commandName} was found.`,
-		);
+		console.error(`No command matching ${interaction.commandName} was found.`);
 		return;
 	}
 
