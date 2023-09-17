@@ -32,6 +32,10 @@ client.on(Events.MessageCreate, async (message) => {
 		if (CMD_NAME === COMMANDS.INSPIRE) {
 			return message.channel.send('quote');
 		}
+
+		if (CMD_NAME === COMMANDS.MEME) {
+			return message.channel.send('meme');
+		}
 	}
 });
 
