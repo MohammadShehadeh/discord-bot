@@ -128,6 +128,26 @@ const appCommand = rest.put(
     Routes.applicationGuildCommands(CLIENT_ID, GUILD_ID), { body: commandsArray },
 )
 ```
+
+# Available Commands
+
+Generates random memes
+```
+/meme
+```
+Generates random quotes
+```
+/inspire
+```
+Plays a given song link or name
+```
+/play
+```
+Joins a given voice channel name
+```
+/join
+```
+
 ## Installation
  ```
 nvm use
